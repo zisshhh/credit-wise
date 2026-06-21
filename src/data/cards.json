@@ -4,8 +4,8 @@
             "id": 1,
             "bank": "HDFC",
             "name": "Millennia Credit Card",
-            "anual_fee": 1000,
-            "joining-fee": 1000,
+            "annual_fee": 1000,
+            "joining_fee": 1000,
             "eligibility": "Anuual income > 4.20L",
             "is_premium": false,
             "reward_rate": "4 points per ₹150",
@@ -24,7 +24,7 @@
             "bank": "HDFC",
             "name": "Regalia Gold Credit Card",
             "anual_fee": 2500,
-            "joining-fee": 2500,
+            "joining_fee": 2500,
             "eligibility": "Annual income > 12L",
             "is_premium": true,
             "reward_rate": "4 points per ₹150",
@@ -43,7 +43,7 @@
             "bank": "HDFC",
             "name": "MoneyBack+ Credit Card",
             "anual_fee": 500,
-            "joining-fee": 500,
+            "joining_fee": 500,
             "eligibility": "Annual income > 3L",
             "is_premium": false,
             "reward_rate": "2 points per ₹150",
@@ -62,7 +62,7 @@
             "bank": "HDFC",
             "name": "IndianOil HDFC Credit Card",
             "anual_fee": 500,
-            "joining-fee": 500,
+            "joining_fee": 500,
             "eligibility": "Annual income > 3L",
             "is_premium": false,
             "reward_rate": "5% value back on fuel",
@@ -81,7 +81,7 @@
             "bank": "HDFC",
             "name": "Swiggy HDFC Credit Card",
             "anual_fee": 500,
-            "joining-fee": 500,
+            "joining_fee": 500,
             "eligibility": "Annual income > 3L",
             "is_premium": false,
             "reward_rate": "10% cashback on Swiggy",
@@ -100,7 +100,7 @@
             "bank": "HDFC",
             "name": "Tata Neu Plus Credit Card",
             "anual_fee": 499,
-            "joining-fee": 499,
+            "joining_fee": 499,
             "eligibility": "Annual income > 3L",
             "is_premium": false,
             "reward_rate": "Up to 7% NeuCoins",
@@ -119,7 +119,7 @@
             "bank": "HDFC",
             "name": "Tata Neu Infinity Credit Card",
             "anual_fee": 1499,
-            "joining-fee": 1499,
+            "joining_fee": 1499,
             "eligibility": "Annual income > 6L",
             "is_premium": true,
             "reward_rate": "Up to 10% NeuCoins",
@@ -138,7 +138,7 @@
             "bank": "HDFC",
             "name": "Diners Club Privilege Credit Card",
             "anual_fee": 2500,
-            "joining-fee": 2500,
+            "joining_fee": 2500,
             "eligibility": "Annual income > 8L",
             "is_premium": true,
             "reward_rate": "4 points per ₹150",
@@ -157,7 +157,7 @@
             "bank": "HDFC",
             "name": "Infinia Metal Edition",
             "anual_fee": 12500,
-            "joining-fee": 12500,
+            "joining_fee": 12500,
             "eligibility": "Invite only",
             "is_premium": true,
             "reward_rate": "5 points per ₹150",
@@ -176,7 +176,7 @@
             "bank": "HDFC",
             "name": "Diners Club Black Metal Edition",
             "anual_fee": 10000,
-            "joining-fee": 10000,
+            "joining_fee": 10000,
             "eligibility": "High income or invite only",
             "is_premium": true,
             "reward_rate": "5 points per ₹150",
@@ -189,6 +189,405 @@
             "dining": "Premium dining privileges",
             "insurance": "Travel insurance benefits",
             "summary": "A premium travel and lifestyle card offering strong reward rates, unlimited airport lounge access, golf benefits, travel insurance, and premium concierge services."
+        },
+        {
+            "id": 11,
+            "bank": "SBI",
+            "name": "SimplyCLICK SBI Card",
+            "anual_fee": 499,
+            "joining_fee": 499,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "1 point per ₹100",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "10X rewards on Amazon, BookMyShow, Cleartrip, Apollo24x7"
+            },
+            "lounge_access": "none",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Limited offers",
+            "insurance": "none",
+            "summary": "An entry-level online shopping card focused on e-commerce spending. It provides accelerated rewards on partner merchants and basic fuel benefits, making it ideal for users who frequently shop online."
+        },
+        {
+            "id": 12,
+            "bank": "SBI",
+            "name": "SimplySAVE SBI Card",
+            "anual_fee": 499,
+            "joining_fee": 499,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "10X reward points on dining and groceries",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Standard reward points"
+            },
+            "lounge_access": "none",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Enhanced rewards",
+            "insurance": "none",
+            "summary": "Designed for everyday spending categories such as groceries, dining, and departmental stores. This card is suitable for families looking to maximize rewards on daily expenses."
+        },
+        {
+            "id": 13,
+            "bank": "SBI",
+            "name": "SBI Cashback Credit Card",
+            "anual_fee": 999,
+            "joining_fee": 999,
+            "eligibility": "Annual income > 4L",
+            "is_premium": false,
+            "reward_rate": "5% cashback",
+            "cashback": {
+                "fuel": "none",
+                "online": "5% cashback on online transactions"
+            },
+            "lounge_access": "none",
+            "fuel_benefits": "none",
+            "dining": "none",
+            "insurance": "none",
+            "summary": "One of India's most popular cashback cards, offering a flat 5% cashback on most online purchases. It focuses purely on savings rather than travel or lifestyle benefits."
+        },
+        {
+            "id": 14,
+            "bank": "SBI",
+            "name": "SBI Card PRIME",
+            "anual_fee": 2999,
+            "joining_fee": 2999,
+            "eligibility": "Annual income > 10L",
+            "is_premium": true,
+            "reward_rate": "2 points per ₹100",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Accelerated rewards on select merchants"
+            },
+            "lounge_access": "8 domestic lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "Travel benefits",
+            "summary": "A premium lifestyle credit card featuring lounge access, dining privileges, milestone rewards, and travel-related benefits for frequent spenders."
+        },
+        {
+            "id": 15,
+            "bank": "ICICI",
+            "name": "Amazon Pay ICICI Credit Card",
+            "anual_fee": 0,
+            "joining_fee": 0,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "5% cashback for Prime members",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "5% on Amazon and 2% on partner merchants"
+            },
+            "lounge_access": "none",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Limited offers",
+            "insurance": "none",
+            "summary": "A lifetime free credit card that delivers excellent cashback for Amazon shoppers. It is one of the easiest cashback cards to recommend for beginners."
+        },
+        {
+            "id": 16,
+            "bank": "ICICI",
+            "name": "ICICI Coral Credit Card",
+            "anual_fee": 500,
+            "joining_fee": 500,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "2 points per ₹100",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Reward points on all spends"
+            },
+            "lounge_access": "4 domestic lounges/quarter",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "none",
+            "summary": "An entry-level lifestyle card offering lounge access, movie benefits, dining offers, and reward points for everyday transactions."
+        },
+        {
+            "id": 17,
+            "bank": "ICICI",
+            "name": "ICICI Sapphiro Credit Card",
+            "anual_fee": 6500,
+            "joining_fee": 6500,
+            "eligibility": "Annual income > 20L",
+            "is_premium": true,
+            "reward_rate": "2 points per ₹100",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Accelerated rewards"
+            },
+            "lounge_access": "Domestic and international lounges",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Premium dining offers",
+            "insurance": "Travel insurance",
+            "summary": "A premium ICICI credit card with concierge services, lounge access, travel insurance, golf benefits, and premium lifestyle privileges."
+        },
+        {
+            "id": 18,
+            "bank": "Axis",
+            "name": "Axis ACE Credit Card",
+            "anual_fee": 499,
+            "joining_fee": 499,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "5% cashback",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "5% cashback on bill payments and partner merchants"
+            },
+            "lounge_access": "4 domestic lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Limited offers",
+            "insurance": "none",
+            "summary": "A highly popular cashback card that provides strong value on utility bills, recharges, and everyday transactions while maintaining a low annual fee."
+        },
+        {
+            "id": 19,
+            "bank": "Axis",
+            "name": "Flipkart Axis Bank Credit Card",
+            "anual_fee": 500,
+            "joining_fee": 500,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "5% cashback on Flipkart",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "5% on Flipkart and partner merchants"
+            },
+            "lounge_access": "4 domestic lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "none",
+            "summary": "A cashback-focused co-branded card that offers excellent value for Flipkart shoppers while also rewarding spending across multiple online categories."
+        },
+        {
+            "id": 20,
+            "bank": "Axis",
+            "name": "Axis Atlas Credit Card",
+            "anual_fee": 5000,
+            "joining_fee": 5000,
+            "eligibility": "Annual income > 12L",
+            "is_premium": true,
+            "reward_rate": "Travel Edge Miles",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Travel rewards"
+            },
+            "lounge_access": "Domestic and international lounge access",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Premium dining offers",
+            "insurance": "Travel insurance",
+            "summary": "One of the best travel credit cards in India, offering strong airline and hotel transfer partners, lounge access, and travel-focused rewards."
+        },
+        {
+            "id": 21,
+            "bank": "HSBC",
+            "name": "HSBC Cashback Credit Card",
+            "anual_fee": 999,
+            "joining_fee": 999,
+            "eligibility": "Annual income > 4L",
+            "is_premium": false,
+            "reward_rate": "Up to 10% cashback",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Enhanced cashback on eligible categories"
+            },
+            "lounge_access": "none",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "none",
+            "summary": "A cashback-oriented card focused on dining, grocery, and online spending. It is popular among users seeking direct statement credits rather than reward points."
+        },
+        {
+            "id": 22,
+            "bank": "HSBC",
+            "name": "HSBC Live+ Credit Card",
+            "anual_fee": 999,
+            "joining_fee": 999,
+            "eligibility": "Annual income > 4L",
+            "is_premium": false,
+            "reward_rate": "Accelerated cashback",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Enhanced rewards on lifestyle spends"
+            },
+            "lounge_access": "4 domestic lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "none",
+            "summary": "A lifestyle-focused credit card providing benefits on dining, entertainment, shopping, and selected travel categories."
+        },
+        {
+            "id": 23,
+            "bank": "IndusInd",
+            "name": "IndusInd Legend Credit Card",
+            "anual_fee": 0,
+            "joining_fee": 0,
+            "eligibility": "Annual income > 5L",
+            "is_premium": false,
+            "reward_rate": "1 reward point per ₹100",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Reward points"
+            },
+            "lounge_access": "1 lounge visit per quarter",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "Air accident cover",
+            "summary": "A lifetime free card offering a balance of rewards, lounge access, and insurance benefits without charging annual fees."
+        },
+        {
+            "id": 24,
+            "bank": "IndusInd",
+            "name": "IndusInd Pinnacle Credit Card",
+            "anual_fee": 15000,
+            "joining_fee": 15000,
+            "eligibility": "Annual income > 20L",
+            "is_premium": true,
+            "reward_rate": "Premium reward points",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Accelerated rewards"
+            },
+            "lounge_access": "Unlimited lounge access",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Premium dining benefits",
+            "insurance": "Comprehensive insurance",
+            "summary": "A luxury credit card designed for affluent customers seeking travel, lifestyle, golf, concierge, and premium reward benefits."
+        },
+        {
+            "id": 25,
+            "bank": "IDFC FIRST",
+            "name": "IDFC FIRST Millennia Credit Card",
+            "anual_fee": 0,
+            "joining_fee": 0,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "3X to 10X reward points",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Accelerated rewards"
+            },
+            "lounge_access": "4 domestic lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "Personal accident cover",
+            "summary": "A lifetime free card with lounge access, reward points, and insurance benefits, making it one of the strongest entry-level cards available."
+        },
+        {
+            "id": 26,
+            "bank": "IDFC FIRST",
+            "name": "IDFC FIRST Select Credit Card",
+            "anual_fee": 0,
+            "joining_fee": 0,
+            "eligibility": "Annual income > 12L",
+            "is_premium": true,
+            "reward_rate": "10X reward points",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Accelerated rewards"
+            },
+            "lounge_access": "8 domestic lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Premium dining offers",
+            "insurance": "Travel and accident cover",
+            "summary": "A lifetime free premium card offering strong reward rates, lounge access, travel benefits, and comprehensive insurance coverage."
+        },
+        {
+            "id": 27,
+            "bank": "IDFC FIRST",
+            "name": "IDFC FIRST Wealth Credit Card",
+            "anual_fee": 0,
+            "joining_fee": 0,
+            "eligibility": "Annual income > 36L",
+            "is_premium": true,
+            "reward_rate": "10X reward points",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Accelerated rewards"
+            },
+            "lounge_access": "Unlimited domestic and international lounges",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Premium dining privileges",
+            "insurance": "Comprehensive travel cover",
+            "summary": "The flagship IDFC FIRST card featuring unlimited lounge access, premium travel benefits, comprehensive insurance, and high-value reward earning opportunities."
+        },
+        {
+            "id": 30,
+            "bank": "American Express",
+            "name": "American Express Gold Charge Card",
+            "anual_fee": 4500,
+            "joining_fee": 1000,
+            "eligibility": "Annual income > 10L",
+            "is_premium": true,
+            "reward_rate": "1 Membership Reward Point per ₹50",
+            "cashback": {
+                "fuel": "none",
+                "online": "Milestone-based rewards"
+            },
+            "lounge_access": "none",
+            "fuel_benefits": "none",
+            "dining": "Premium dining offers",
+            "insurance": "Travel assistance benefits",
+            "summary": "One of the most beloved Amex cards among reward enthusiasts. The card excels through milestone bonuses and Membership Rewards redemptions rather than cashback."
+        },
+        {
+            "id": 31,
+            "bank": "American Express",
+            "name": "American Express Platinum Travel Credit Card",
+            "anual_fee": 5000,
+            "joining_fee": 5000,
+            "eligibility": "Annual income > 8L",
+            "is_premium": true,
+            "reward_rate": "Membership Rewards + Milestones",
+            "cashback": {
+                "fuel": "none",
+                "online": "Reward points on all spends"
+            },
+            "lounge_access": "Domestic and international lounges",
+            "fuel_benefits": "none",
+            "dining": "Premium dining benefits",
+            "insurance": "Travel-related benefits",
+            "summary": "One of India's most popular travel credit cards. Users can earn substantial rewards through milestone spending and redeem points for premium hotel stays and travel."
+        },
+        {
+            "id": 32,
+            "bank": "American Express",
+            "name": "American Express Platinum Reserve Credit Card",
+            "anual_fee": 10000,
+            "joining_fee": 10000,
+            "eligibility": "Annual income > 15L",
+            "is_premium": true,
+            "reward_rate": "Membership Rewards Points",
+            "cashback": {
+                "fuel": "none",
+                "online": "Reward points on all spends"
+            },
+            "lounge_access": "Domestic and international lounges",
+            "fuel_benefits": "none",
+            "dining": "Premium dining privileges",
+            "insurance": "Travel insurance",
+            "summary": "A premium lifestyle card offering airport lounge access, concierge services, travel benefits, and access to the American Express premium ecosystem."
+        },
+        {
+            "id": 33,
+            "bank": "American Express",
+            "name": "American Express Platinum Card",
+            "anual_fee": 66000,
+            "joining_fee": 66000,
+            "eligibility": "Invite only / High Net Worth Individuals",
+            "is_premium": true,
+            "reward_rate": "Membership Rewards Points",
+            "cashback": {
+                "fuel": "none",
+                "online": "Premium rewards ecosystem"
+            },
+            "lounge_access": "Unlimited global lounge access",
+            "fuel_benefits": "none",
+            "dining": "Exclusive luxury dining benefits",
+            "insurance": "Comprehensive travel and lifestyle insurance",
+            "summary": "One of the most prestigious credit cards available in India. It offers concierge services, luxury hotel memberships, unlimited lounge access, elite travel privileges, and premium lifestyle experiences."
         }
     ]
 ]
