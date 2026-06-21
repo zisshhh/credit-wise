@@ -1,0 +1,194 @@
+[
+    [
+        {
+            "id": 1,
+            "bank": "HDFC",
+            "name": "Millennia Credit Card",
+            "anual_fee": 1000,
+            "joining-fee": 1000,
+            "eligibility": "Anuual income > 4.20L",
+            "is_premium": false,
+            "reward_rate": "4 points per ₹150",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "5% on Amazon, Flipkart, Myntra, Swiggy, Uber"
+            },
+            "lounge_access": "8 domestic lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "none",
+            "summary": "Focused purely on cashback for online spenders, this card offers 5% flat cashback on online purchases with no reward points. Fuel benefits are modest, and it lacks lounge and dining perks. With a ₹999 fee, it’s best for online-heavy spenders who want simple and direct savings. Suitable for users earning above ₹3L annually"
+        },
+        {
+            "id": 2,
+            "bank": "HDFC",
+            "name": "Regalia Gold Credit Card",
+            "anual_fee": 2500,
+            "joining-fee": 2500,
+            "eligibility": "Annual income > 12L",
+            "is_premium": true,
+            "reward_rate": "4 points per ₹150",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Accelerated rewards on partner brands"
+            },
+            "lounge_access": "12 domestic and 6 international lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "Air accident cover and travel benefits",
+            "summary": "A premium lifestyle and travel card offering strong reward earnings, airport lounge access, dining privileges, and travel benefits. It is designed for frequent travelers and high spenders who want a balance of rewards and premium perks."
+        },
+        {
+            "id": 3,
+            "bank": "HDFC",
+            "name": "MoneyBack+ Credit Card",
+            "anual_fee": 500,
+            "joining-fee": 500,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "2 points per ₹150",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "10X CashPoints on Amazon, Flipkart and Swiggy"
+            },
+            "lounge_access": "none",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Limited offers",
+            "insurance": "none",
+            "summary": "An entry-level rewards credit card focused on everyday spending. It provides accelerated rewards on popular online platforms and basic fuel benefits, making it suitable for first-time credit card users."
+        },
+        {
+            "id": 4,
+            "bank": "HDFC",
+            "name": "IndianOil HDFC Credit Card",
+            "anual_fee": 500,
+            "joining-fee": 500,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "5% value back on fuel",
+            "cashback": {
+                "fuel": "Up to 5% value back at IndianOil outlets",
+                "online": "Standard reward points"
+            },
+            "lounge_access": "none",
+            "fuel_benefits": "Up to 5% savings on fuel spends",
+            "dining": "Limited offers",
+            "insurance": "none",
+            "summary": "Designed specifically for motorists, this card offers significant savings on fuel purchases at IndianOil outlets along with surcharge waivers. It is ideal for users with high monthly fuel expenses."
+        },
+        {
+            "id": 5,
+            "bank": "HDFC",
+            "name": "Swiggy HDFC Credit Card",
+            "anual_fee": 500,
+            "joining-fee": 500,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "10% cashback on Swiggy",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "10% on Swiggy, 5% on selected online merchants"
+            },
+            "lounge_access": "none",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available through Swiggy ecosystem",
+            "insurance": "none",
+            "summary": "Built for food delivery and online shopping enthusiasts, this card offers one of the highest cashback rates on Swiggy transactions along with attractive rewards on everyday online spending."
+        },
+        {
+            "id": 6,
+            "bank": "HDFC",
+            "name": "Tata Neu Plus Credit Card",
+            "anual_fee": 499,
+            "joining-fee": 499,
+            "eligibility": "Annual income > 3L",
+            "is_premium": false,
+            "reward_rate": "Up to 7% NeuCoins",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Rewards across Tata brands"
+            },
+            "lounge_access": "4 domestic lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "none",
+            "summary": "An affordable co-branded card for Tata ecosystem users. It rewards purchases across Tata brands including BigBasket, Croma, Air India and Tata CLiQ through NeuCoins."
+        },
+        {
+            "id": 7,
+            "bank": "HDFC",
+            "name": "Tata Neu Infinity Credit Card",
+            "anual_fee": 1499,
+            "joining-fee": 1499,
+            "eligibility": "Annual income > 6L",
+            "is_premium": true,
+            "reward_rate": "Up to 10% NeuCoins",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Enhanced rewards across Tata brands"
+            },
+            "lounge_access": "8 domestic lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "Travel-related benefits",
+            "summary": "The premium version of Tata Neu Plus, offering higher NeuCoin earnings, lounge access, and enhanced travel and lifestyle benefits for users heavily invested in the Tata ecosystem."
+        },
+        {
+            "id": 8,
+            "bank": "HDFC",
+            "name": "Diners Club Privilege Credit Card",
+            "anual_fee": 2500,
+            "joining-fee": 2500,
+            "eligibility": "Annual income > 8L",
+            "is_premium": true,
+            "reward_rate": "4 points per ₹150",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Accelerated rewards on partner merchants"
+            },
+            "lounge_access": "12 domestic and international lounges/year",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Available",
+            "insurance": "Travel benefits",
+            "summary": "A lifestyle-focused Diners Club card that combines good reward earnings, airport lounge access, and entertainment benefits. Suitable for professionals seeking travel and lifestyle perks."
+        },
+        {
+            "id": 9,
+            "bank": "HDFC",
+            "name": "Infinia Metal Edition",
+            "anual_fee": 12500,
+            "joining-fee": 12500,
+            "eligibility": "Invite only",
+            "is_premium": true,
+            "reward_rate": "5 points per ₹150",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Accelerated rewards on premium spends"
+            },
+            "lounge_access": "Unlimited domestic and international lounges",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Premium dining privileges",
+            "insurance": "Comprehensive travel and air accident cover",
+            "summary": "HDFC Bank's flagship super-premium credit card. It provides excellent reward rates, unlimited lounge access, luxury travel benefits, golf privileges, and comprehensive insurance coverage."
+        },
+        {
+            "id": 10,
+            "bank": "HDFC",
+            "name": "Diners Club Black Metal Edition",
+            "anual_fee": 10000,
+            "joining-fee": 10000,
+            "eligibility": "High income or invite only",
+            "is_premium": true,
+            "reward_rate": "5 points per ₹150",
+            "cashback": {
+                "fuel": "1% surcharge waiver",
+                "online": "Accelerated rewards on select categories"
+            },
+            "lounge_access": "Unlimited domestic and international lounges",
+            "fuel_benefits": "1% surcharge waiver",
+            "dining": "Premium dining privileges",
+            "insurance": "Travel insurance benefits",
+            "summary": "A premium travel and lifestyle card offering strong reward rates, unlimited airport lounge access, golf benefits, travel insurance, and premium concierge services."
+        }
+    ]
+]
