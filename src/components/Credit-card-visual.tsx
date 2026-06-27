@@ -13,15 +13,14 @@ const themeStyles: Record<CardData, string> = {
 interface CreditCardVisualProps {
   name: string
   issuer: string
-  theme: CardTheme
+  theme: CardData
   className?: string
 }
 
 export function CreditCardVisual({ name, issuer, theme, className }: CreditCardVisualProps) {
   return (
     <div
-      className={cn(
-        "relative flex aspect-[1.586/1] w-full flex-col justify-between overflow-hidden rounded-xl bg-gradient-to-br p-5 shadow-lg",
+      className={cn( "relative flex aspect-[1.586/1] w-full flex-col justify-between overflow-hidden rounded-xl bg-linear-to-br p-5 shadow-lg",
         themeStyles[theme],
         className,
       )}

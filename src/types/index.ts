@@ -1,6 +1,7 @@
 
-export interface CardData {
+export interface CardDataProps {
     id: number;
+    image: string
     bank: string;
     name: string;
     annual_fee: number;
@@ -16,5 +17,23 @@ export interface CardData {
     fuel_benefits: string;
     dining: string;
     insurance: string
+    summary: string
+}
+
+// type Reward = {
+//     rate: string;
+//     details: string
+// }
+
+export interface CreditCardDivProps {
+    image: string
+    cardName: string
+    bankName: string
+    annualFee?: number
+    minIncome: string
+    rating: number
+    isPremuim?: boolean
+    benefits: { icon: React.ReactNode; lable: string}[];
+    rewards: string
     summary: string
 }

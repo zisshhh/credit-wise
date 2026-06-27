@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Sparkles, ShieldCheck, Star } from "lucide-react"
 import { CreditCardVisual } from "./Credit-card-visual"
 
@@ -8,7 +7,7 @@ export const Hero = () => {
   return (
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,color-mix(in_oklch,var(--primary),transparent_88%),transparent)]" />
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 md:py-24 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 pt-6 pb-16 md:pt-14 md:pb-20 lg:grid-cols-2">
         <div className="flex flex-col items-start gap-6">
           <h1 className="font-heading text-4xl font-extrabold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
             Find the credit card that actually fits you

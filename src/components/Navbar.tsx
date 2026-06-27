@@ -24,13 +24,13 @@ export const Navbaar = () => {
                     <Link href="/" className="text-base text-white transition-colors hover:text-blue-400">
                         Home
                     </Link>
-                    <Link href="/cards" className="text-sm text-white transition-colors hover:text-white">
+                    <Link href="/cards" className="text-sm text-white transition-colors hover:text-blue-400">
                         All cards
                     </Link>
-                    <Link href="/assistant" className="text-sm text-white transition-colors hover:text-white">
+                    <Link href="/assistant" className="text-sm text-white transition-colors hover:text-blue-400">
                         AI assistant
                     </Link>
-                    <Link href="/learn" className="text-sm text-white transition-colors hover:text-white">
+                    <Link href="/learn" className="text-sm text-white transition-colors hover:text-blue-400">
                         Credit School
                     </Link>
                 </nav>
