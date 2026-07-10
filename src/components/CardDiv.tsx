@@ -19,26 +19,43 @@ export const CardDiv = ({
     const [showSummary, setShowSummary] = useState(false);
 
     return (
-        <div className="w-full sm:w-[340px] bg-white/5 backdrop-blur-xl shadow-xl ring-1 ring-white/10 text-white rounded-3xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
+        <div className="w-full sm:w-[340px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 text-white backdrop-blur-xl shadow-2xl transition-all duration-300 hover:border-white/20 hover:shadow-purple-500/10">
 
-            <div className="relative h-48 bg-linear-to-br from-zinc-900 to-black rounded-t-3xl overflow-hidden">
-                <img
-                    src={image}
-                    alt={cardName}
-                    className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/40 to-black/80" />
+            {/* Header */}
+            <div className="relative bg-linear-to-br from-zinc-900 via-black to-zinc-950 px-5 pt-4 pb-2">
 
-                <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-xl flex items-center gap-1 text-yellow-400 font-semibold text-sm">
-                    <Star className="w-4 h-4 fill-yellow-400 stroke-yellow-400" />
-                    {rating}
+                {/* Top Row */}
+                <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-20">
+
+                    {isPremuim ? (
+                        <div className="flex items-center gap-2 rounded-full border border-yellow-400/30 bg-linear-to-r from-yellow-400 via-amber-300 to-yellow-500 px-3 py-1 shadow-lg shadow-yellow-500/20">
+                            <span className="h-2 w-2 rounded-full bg-black" />
+                            <span className="text-[11px] font-bold tracking-[0.18em] text-black">
+                                PREMIUM
+                            </span>
+                        </div>
+                    ) : (
+                        <div />
+                    )}
+
+                    <div className="flex items-center gap-1 rounded-full border border-white/10 bg-white/10 px-3 py-1 backdrop-blur-md">
+                        <Star className="h-3.5 w-3.5 fill-yellow-400 stroke-yellow-400" />
+                        <span className="text-sm font-semibold">{rating}</span>
+                    </div>
                 </div>
 
-                {isPremuim && (
-                    <div className="absolute top-4 left-4 bg-linear-to-r from-amber-500 via-yellow-400 to-amber-300 text-black text-xs font-bold px-3 py-1 rounded-xl shadow-lg shadow-amber-500/30">
-                        PREMIUM
+
+                {/* <div className="mt-10 flex justify-center">
+                    <div className="relative">
+                        <div className="absolute inset-0 scale-110 rounded-full bg-purple-500/20 blur-3xl" />
+
+                        <img
+                            src={image}
+                            alt={cardName}
+                            className="relative w- drop-shadow-[0_18px_30px_rgba(0,0,0,0.65)] transition-transform duration-300 hover:scale-105"
+                        />
                     </div>
-                )}
+                </div> */}
             </div>
 
             <div className="p-5 sm:p-6 flex flex-col gap-4">
@@ -62,8 +79,6 @@ export const CardDiv = ({
                     <div>
                         <div className="text-xs uppercase tracking-widest text-gray-400 mb-2">Rewards</div>
                         <div className="text-sm font-medium text-emerald-400"> {rewards}
-                            {/* <p>{rewards.rate}</p>
-                            <p>{rewards.details}</p> */}
                         </div>
                     </div>
                 )}
@@ -77,8 +92,7 @@ export const CardDiv = ({
                         {benefits?.map((b, i) => (
                             <div
                                 key={i}
-                                className="group flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 transition-all duration-300 hover:border-white/20 hover:bg-white/10"
-                            >
+                                className="group flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 transition-all duration-300 hover:border-white/20 hover:bg-white/10">
                                 <div className="rounded-lg bg-white/10 p-1.5 group-hover:scale-110 transition-transform">
                                     {b.icon}
                                 </div>
@@ -94,8 +108,7 @@ export const CardDiv = ({
                 <div className="mt-2">
                     <button
                         onClick={() => setShowSummary(!showSummary)}
-                        className="flex items-center justify-between w-full text-left text-sm font-medium text-gray-300 hover:text-white transition-colors"
-                    >
+                        className="flex items-center justify-between w-full text-left text-sm font-medium text-gray-300 hover:text-white transition-colors">
                         <span>Card Summary</span>
                         {showSummary ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                     </button>
