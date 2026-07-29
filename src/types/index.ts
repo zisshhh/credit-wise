@@ -20,11 +20,6 @@ export interface CardDataProps {
     summary: string
 }
 
-// type Reward = {
-//     rate: string;
-//     details: string
-// }
-
 export interface CreditCardDivProps {
     image: string
     cardName: string
@@ -32,7 +27,7 @@ export interface CreditCardDivProps {
     annualFee?: number
     minIncome: string
     rating: number
-    isPremuim?: boolean
+    isPremium?: boolean
     benefits: { icon: React.ReactNode; lable: string}[];
     rewards: string
     summary: string
