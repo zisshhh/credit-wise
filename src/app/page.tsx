@@ -9,7 +9,7 @@ export default function Home() {
     <main className='min-h-screen bg-black text-white'>
       <Navbaar />
       <Hero />
-      <AvailableCard />
+      <AvailableCard limit={8} />
     </main>
   );
 }

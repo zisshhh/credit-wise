@@ -7,15 +7,15 @@ export const Hero = () => {
   return (
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,color-mix(in_oklch,var(--primary),transparent_88%),transparent)]" />
-      <div className="mx-auto grid max-w-6xl items-center gap-12 pt-6 pb-16 md:pt-14 md:pb-20 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:px-8 pt-8 pb-16 md:pt-14 md:pb-20 lg:grid-cols-2">
         <div className="flex flex-col items-start gap-6">
           <h1 className="font-heading text-4xl font-extrabold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
             Find the credit card that actually fits you
           </h1>
 
           <p className="max-w-md text-base text-gray-400 leading-relaxed text-pretty">
-          The Only platform for all your credit card related doubts
-          Get resolved all your credit card and finance related doubts powered by AI
+            The Only platform for all your credit card related doubts
+            Get resolved all your credit card and finance related doubts powered by AI
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">

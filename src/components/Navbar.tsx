@@ -10,7 +10,7 @@ export const Navbaar = () => {
 
     return (
         <header className="sticky mx-auto top-0 border-b border-white/10 bg-black/80 backdrop-blur-md">
-            <div className="mx-32 flex h-20 items-center justify-between gap-4">
+            <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 <Link href="/" className="flex items-center gap-1">
                     <span className="flex size-8 items-center justify-center rounded-lg text-white">
                         <CreditCard className="size-4" />
@@ -36,7 +36,7 @@ export const Navbaar = () => {
                 </nav>
 
                 <Button onClick={() => router.push("/assistant")}
-                    className="border-solid p-5">
+                    className="hidden md:flex px-5">
                     AI assistant
                 </Button>
             </div>
