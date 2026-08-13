@@ -8,7 +8,6 @@ import {
     Plane,
     Sparkles,
     CheckCircle2,
-    Zap,
     ShieldCheck
 } from "lucide-react";
 
@@ -25,7 +24,7 @@ interface CardType {
 const cardTypes: CardType[] = [
     {
         title: "Cashback Cards",
-        icon: <CreditCard className="h-6 w-6 text-green-400" />,
+        icon: <CreditCard className="h-6 w-6" />,
         badge: "Most Popular",
         description: "Earn direct money back as statement credit on your everyday shopping and utilities.",
         example: "HDFC Millennia (5% on Amazon/Flipkart) • SBI Cashcard (5% online)",
@@ -38,7 +37,7 @@ const cardTypes: CardType[] = [
     },
     {
         title: "Rewards Cards",
-        icon: <Gift className="h-6 w-6 text-purple-400" />,
+        icon: <Gift className="h-6 w-6" />,
         badge: "High Value",
         description: "Accumulate reward points that can be redeemed for gift vouchers, electronics, or flights.",
         example: "Amex MRCC • HDFC MoneyBack+ • Axis Bank SELECT",
@@ -51,7 +50,7 @@ const cardTypes: CardType[] = [
     },
     {
         title: "Travel & Lifestyle Cards",
-        icon: <Plane className="h-6 w-6 text-sky-400" />,
+        icon: <Plane className="h-6 w-6" />,
         badge: "Premium Perks",
         description: "Tailored for travelers offering free airport lounge visits, low forex markup, and hotel perks.",
         example: "HDFC Regalia Gold • Axis Atlas • SBI Club Vistara",
@@ -64,7 +63,7 @@ const cardTypes: CardType[] = [
     },
     {
         title: "Lifetime Free Cards",
-        icon: <Sparkles className="h-6 w-6 text-yellow-400" />,
+        icon: <Sparkles className="h-6 w-6" />,
         badge: "Zero Annual Fee",
         description: "Zero annual or joining fees forever. Great for building credit score without fixed costs.",
         example: "Amazon Pay ICICI • OneCard • IDFC FIRST Millennia",
@@ -81,13 +80,9 @@ export default function CardTypes() {
     return (
         <div className="space-y-8 text-white">
             <div>
-                <div className="flex items-center gap-2 mb-2">
-                    <Zap className="h-5 w-5 text-blue-400" />
-                    <span className="text-xs uppercase tracking-wider text-blue-400 font-semibold">Module 1</span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">Types of Credit Cards</h2>
-                <p className="text-zinc-400 text-sm sm:text-base max-w-2xl">
-                    Every credit card is engineered for specific spending habits. Choose the right category to maximize your returns.
+                <h2 className="text-2xl sm:text-3xl font-bold mb-2">Types of Credit Cards</h2>
+                <p className="text-muted-foreground text-sm sm:text-base max-w-4xl">
+                    Different credit cards serve different purposes. Choose the one that best matches your spending habits and financial goals.
                 </p>
             </div>
 
@@ -98,76 +93,49 @@ export default function CardTypes() {
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }} >
-                        <Card className="p-6 bg-gray-400/10 border border-white/20 text-white rounded-2xl h-full flex flex-col justify-between hover:bg-gray-400/15 transition-all duration-300">
-                            <div>
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-2.5 rounded-xl bg-white/10 border border-white/10">
-                                            {type.icon}
-                                        </div>
-                                        <h3 className="text-xl font-bold text-white">{type.title}</h3>
+                        <Card className="p-6 bg-gray-400/10 border border-white/20 text-white rounded-2xl h-full flex flex-col justify-between">
+                            <div className="flex items-center justify-between mb-4">
+                                <div className="flex items-center gap-3">
+                                    <div className="">
+                                        {type.icon}
                                     </div>
-                                    <span className="text-xs font-semibold px-2.5 py-1 rounded-md bg-white/10 border border-white/20 text-white">
-                                        {type.badge}
-                                    </span>
+                                    <h3 className="text-xl font-bold text-white">{type.title}</h3>
                                 </div>
-
-                                <p className="text-zinc-300 text-sm mb-4 leading-relaxed">{type.description}</p>
-
-                                <div className="mb-4 p-3 rounded-xl bg-black/40 border border-white/10">
-                                    <span className="text-xs text-zinc-400 font-medium block mb-1">Popular Examples:</span>
-                                    <p className="text-xs text-zinc-200 font-medium">{type.example}</p>
-                                </div>
-
-                                <div>
-                                    <span className="text-xs text-zinc-400 font-medium block mb-2">Key Advantages:</span>
-                                    <ul className="space-y-2">
-                                        {type.benefits.map((benefit, idx) => (
-                                            <li key={idx} className="text-xs text-zinc-300 flex items-start gap-2">
-                                                <CheckCircle2 className="h-4 w-4 text-green-400 shrink-0 mt-0.5" />
-                                                <span>{benefit}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
+                                <span className="text-xs font-semibold px-2.5 py-1 rounded-md bg-white/10 border border-white/20 text-white">
+                                    {type.badge}
+                                </span>
                             </div>
 
-                            <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
-                                <span className="text-zinc-400">Best for:</span>
-                                <span className="text-blue-300 font-medium text-right max-w-[200px]">{type.bestFor}</span>
+                            <p className="text-muted-foreground">{type.description}</p>
+
+                            <div className="mb-2">
+                                <h4 className="font-medium mb-1">Example:</h4>
+                                <p className="text-sm">{type.example}</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-medium mb-2">Key Advantages:</h4>
+                                <ul className="list-disc list-inside space-y-2">
+                                    {type.benefits.map((benefit, idx) => (
+                                        <li key={idx} className="text-sm">
+                                            {benefit}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </Card>
                     </motion.div>
                 ))}
             </div>
 
-            <Card className="p-6 bg-gray-400/10 border border-white/20 rounded-2xl text-white">
-                <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-xl bg-white/10 text-blue-400 border border-white/10 shrink-0">
-                        <ShieldCheck className="h-6 w-6" />
-                    </div>
-                    <div className="space-y-2">
-                        <h3 className="text-lg font-semibold text-white">Smart Decision Checklist</h3>
-                        <div className="grid sm:grid-cols-2 gap-3 text-sm text-zinc-300 pt-1">
-                            <div className="flex items-center gap-2">
-                                <div className="h-1.5 w-1.5 rounded-full bg-blue-400" />
-                                <span>Align card rewards with your top 2 expense categories</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="h-1.5 w-1.5 rounded-full bg-blue-400" />
-                                <span>Verify if annual fee is waived on hitting spend milestones</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="h-1.5 w-1.5 rounded-full bg-blue-400" />
-                                <span>Check welcome bonus voucher terms before applying</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="h-1.5 w-1.5 rounded-full bg-blue-400" />
-                                <span>Start with a Lifetime Free card if you are building credit</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <Card className="p-4 bg-gray-400/10 border-none text-white">
+                <h3 className="text-lg font-medium mb-2">Choosing the Right Card</h3>
+                <ul className="list-disc list-inside space-y-2">
+                    <li>Consider your spending patterns and lifestyle</li>
+                    <li>Compare rewards and benefits across different cards</li>
+                    <li>Check if the annual fee is worth the benefits</li>
+                    <li>Look for cards that offer welcome bonuses</li>
+                </ul>
             </Card>
         </div>
     );
