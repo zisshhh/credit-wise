@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Slider } from "@/components/ui/slider";
 import { Card } from "@/components/ui/card";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
-import { Calculator, AlertTriangle, Zap } from "lucide-react";
 
 const COLORS = ["#3B82F6", "#F97316"];
 
@@ -44,42 +43,36 @@ export default function AprCalculator() {
     return (
         <div className="space-y-8 text-white">
             <div>
-                <div className="flex items-center gap-2 mb-2">
-                    <Calculator className="h-5 w-5 text-sky-400" />
-                    <span className="text-xs uppercase tracking-wider text-sky-400 font-semibold">Module 3</span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">Understanding APR (Annual Percentage Rate)</h2>
-                <p className="text-zinc-400 text-sm sm:text-base max-w-2xl">
-                    APR measures the annualized cost of carrying a balance on your credit card. Test how different loan balances & APRs impact total interest.
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">What is APR (Annual Percentage Rate)?</h2>
+                <p className="text-zinc-400 text-sm sm:text-base">
+                    APR is the yearly interest rate you pay on your credit card balance. Test how different loan balances & APRs impact total interest.
                 </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-12 items-start">
-                {/* Sliders Area */}
-                <div className="md:col-span-7 space-y-6 bg-gray-400/10 p-6 rounded-2xl border border-white/20">
+            <div className="grid gap-6 md:grid-cols-12 items-start">
+                <div className="md:col-span-7 space-y-6 p-6 rounded-2xl border border-white/10">
                     <div>
-                        <div className="flex justify-between items-center mb-2 text-sm font-medium">
-                            <span className="text-zinc-300">Carried Balance Amount</span>
-                            <span className="text-blue-400 font-bold text-base">₹{loanAmount.toLocaleString("en-IN")}</span>
+                        <div className="flex justify-between items-center mb-2">
+                            <span className="font-semibold text-base">Loan Amount:</span>
+                            <span className="font-semibold text-base">₹{loanAmount.toLocaleString("en-IN")}</span>
                         </div>
                         <Slider
                             value={[loanAmount]}
                             onValueChange={([val]) => setLoanAmount(val)}
-                            min={2000}
+                            min={1000}
                             max={100000}
                             step={1000}
-                            className="w-full py-2"
-                        />
+                            className="w-full py-2" />
                         <div className="flex justify-between text-[11px] text-zinc-400 mt-1">
-                            <span>₹2,000</span>
+                            <span>₹1,000</span>
                             <span>₹100,000</span>
                         </div>
                     </div>
 
                     <div>
-                        <div className="flex justify-between items-center mb-2 text-sm font-medium">
-                            <span className="text-zinc-300">Annual Percentage Rate (APR)</span>
-                            <span className="text-orange-400 font-bold text-base">{apr}% per year</span>
+                        <div className="flex justify-between items-center mb-2">
+                            <span className="font-semibold text-base">APR</span>
+                            <span className=" font-semibold text-base">{apr}% per year</span>
                         </div>
                         <Slider
                             value={[apr]}
@@ -87,8 +80,7 @@ export default function AprCalculator() {
                             min={12}
                             max={42}
                             step={1}
-                            className="w-full py-2"
-                        />
+                            className="w-full py-2" />
                         <div className="flex justify-between text-[11px] text-zinc-400 mt-1">
                             <span>12% (Lowest)</span>
                             <span>42% (Standard Credit Card)</span>
@@ -97,8 +89,8 @@ export default function AprCalculator() {
 
                     <div>
                         <div className="flex justify-between items-center mb-2 text-sm font-medium">
-                            <span className="text-zinc-300">Repayment Duration</span>
-                            <span className="text-purple-400 font-bold text-base">{duration} Months</span>
+                            <span className="font-semibold text-base">Duration</span>
+                            <span className="font-semibold text-base">{duration} Months</span>
                         </div>
                         <Slider
                             value={[duration]}
@@ -115,9 +107,8 @@ export default function AprCalculator() {
                     </div>
                 </div>
 
-                {/* Summary Card */}
                 <div className="md:col-span-5 space-y-4">
-                    <Card className="p-6 bg-gray-400/10 border border-white/20 rounded-2xl text-white shadow-2xl">
+                    <Card className="p-6 bg-gray-500/10 border border-white/10 rounded-2xl text-white shadow-2xl">
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-300 mb-4 pb-2 border-b border-white/10 flex items-center justify-between">
                             <span>Repayment Summary</span>
                             <span className="bg-white/10 border border-white/20 text-white text-[10px] px-2 py-0.5 rounded-md font-semibold">
@@ -144,54 +135,50 @@ export default function AprCalculator() {
                             </div>
                         </div>
                     </Card>
+                </div>
 
-                    {/* Chart Container */}
-                    <Card className="p-4 bg-gray-400/10 border border-white/20 rounded-2xl text-white">
-                        <div className="h-[180px]">
-                            <ResponsiveContainer width="100%" height="100%">
-                                <PieChart>
-                                    <Pie
-                                        data={pieData}
-                                        cx="50%"
-                                        cy="50%"
-                                        innerRadius={45}
-                                        outerRadius={65}
-                                        paddingAngle={4}
-                                        dataKey="value"
-                                    >
-                                        {pieData.map((entry, index) => (
-                                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                                        ))}
-                                    </Pie>
-                                    <Tooltip content={<CustomPieTooltip />} />
-                                </PieChart>
-                            </ResponsiveContainer>
-                        </div>
-                        <div className="flex justify-center items-center gap-6 text-xs mt-2">
-                            <div className="flex items-center gap-2">
-                                <span className="h-3 w-3 rounded-full bg-blue-500" />
-                                <span className="text-zinc-300">Principal</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <span className="h-3 w-3 rounded-full bg-orange-500" />
-                                <span className="text-zinc-300">Interest ({Math.round((interest/totalRepayment)*100)}%)</span>
-                            </div>
-                        </div>
-                    </Card>
+                <div className="md:col-span-12 mt-8 flex justify-center">
+                    <div className="h-72 w-full max-w-2xl">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <PieChart>
+                                <Pie
+                                    data={pieData}
+                                    cx="50%"
+                                    cy="50%"
+                                    innerRadius={60}
+                                    outerRadius={80}
+                                    paddingAngle={5}
+                                    dataKey="value"
+                                    stroke="none"
+                                    label={(props: any) => {
+                                        const { cx, x, y, index, value } = props;
+                                        return (
+                                            <text 
+                                                x={x} 
+                                                y={y} 
+                                                fill={COLORS[index % COLORS.length]} 
+                                                textAnchor={x > cx ? 'start' : 'end'} 
+                                                dominantBaseline="central"
+                                                className="text-sm font-medium">
+                                                {index === 0 ? 'Principal' : 'Interest'}: ₹{value.toLocaleString("en-IN")}
+                                            </text>
+                                        );
+                                    }}>
+                                    {pieData.map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                    ))}
+                                </Pie>
+                                <Tooltip content={<CustomPieTooltip />} />
+                            </PieChart>
+                        </ResponsiveContainer>
+                    </div>
                 </div>
             </div>
 
-            {/* Note */}
-            <Card className="p-5 bg-gray-400/10 border border-white/20 rounded-2xl text-white">
-                <div className="flex items-start gap-3">
-                    <AlertTriangle className="h-5 w-5 text-amber-400 shrink-0 mt-0.5" />
-                    <div className="text-xs sm:text-sm text-zinc-300 space-y-1">
-                        <span className="font-semibold text-amber-300 block">Pro Tip on Credit Card APR</span>
-                        <p className="leading-relaxed">
-                            Credit card interest is charged daily using your Average Daily Balance. If you clear 100% of your bill before the due date, you enjoy up to 45 to 50 days of <strong>0% interest grace period</strong>!
-                        </p>
-                    </div>
-                </div>
+             <Card className="p-4 bg-gray-400/10 text-white border border-white/20">
+                <p className="text-sm">
+                    Example: ₹10,000 borrowed for 6 months at 24% APR = ₹1,200 interest
+                </p>
             </Card>
         </div>
     );
