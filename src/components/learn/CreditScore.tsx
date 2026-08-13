@@ -11,7 +11,7 @@ import {
     ResponsiveContainer,
     Cell
 } from "recharts";
-import { CheckCircle2, XCircle, Shield, Award, HelpCircle } from "lucide-react";
+import { CheckCircle2, XCircle } from "lucide-react";
 
 interface ScoreFactor {
     name: string;
@@ -54,10 +54,10 @@ const scoreFactors: ScoreFactor[] = [
 ];
 
 const scoreRanges = [
-    { range: "750 - 900", label: "Excellent", status: "Instant approvals & lowest interest", color: "text-green-400 border-green-500/30" },
-    { range: "700 - 749", label: "Good", status: "High approval rates for premium cards", color: "text-blue-400 border-blue-500/30" },
-    { range: "650 - 699", label: "Fair", status: "Standard card options, moderate limits", color: "text-yellow-400 border-yellow-500/30" },
-    { range: "300 - 649", label: "Needs Work", status: "Secured credit cards required to build", color: "text-red-400 border-red-500/30" },
+    { range: "750 - 900", label: "Excellent", status: "Instant approvals & lowest interest" },
+    { range: "700 - 749", label: "Good", status: "High approval rates for premium cards" },
+    { range: "650 - 699", label: "Fair", status: "Standard card options, moderate limits" },
+    { range: "300 - 649", label: "Needs Work", status: "Secured credit cards required to build" },
 ];
 
 const dos = [
@@ -81,7 +81,7 @@ const CustomTooltip = ({ active, payload }: any) => {
             <div className="bg-black/90 border border-white/20 p-3 rounded-xl shadow-xl text-white text-xs space-y-1">
                 <p className="font-bold text-sm text-blue-400">{data.name}</p>
                 <p className="font-semibold text-zinc-200">Weight: {data.percentage}% of overall score</p>
-                <p className="text-zinc-400 max-w-[220px] leading-relaxed">{data.description}</p>
+                <p className="text-zinc-400 max-w-55 leading-relaxed">{data.description}</p>
             </div>
         );
     }
@@ -92,20 +92,15 @@ export default function CreditScoreFactors() {
     return (
         <div className="space-y-8 text-white">
             <div>
-                <div className="flex items-center gap-2 mb-2">
-                    <Shield className="h-5 w-5 text-indigo-400" />
-                    <span className="text-xs uppercase tracking-wider text-indigo-400 font-semibold">Module 2</span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">Understanding CIBIL & Credit Scores</h2>
+                <h2 className="text-2xl sm:text-3xl font-semibold mb-2">Understanding CIBIL & Credit Scores</h2>
                 <p className="text-zinc-400 text-sm sm:text-base max-w-2xl">
                     Your credit score (300 to 900) determines your creditworthiness. Here is exact math behind how bureaus calculate it.
                 </p>
             </div>
 
-            {/* Score Ranges Bar */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {scoreRanges.map((range, index) => (
-                    <div key={index} className={`p-4 rounded-xl bg-gray-400/10 border ${range.color} flex flex-col justify-between`}>
+                    <div key={index} className="p-4 rounded-xl bg-gray-400/5 border flex flex-col justify-between">
                         <div>
                             <span className="text-xs font-semibold uppercase tracking-wider block opacity-80">{range.label}</span>
                             <span className="text-2xl font-extrabold block my-1">{range.range}</span>
@@ -115,36 +110,32 @@ export default function CreditScoreFactors() {
                 ))}
             </div>
 
-            {/* Chart Section */}
             <Card className="p-6 bg-gray-400/10 border border-white/20 rounded-2xl text-white">
                 <div className="flex items-center justify-between mb-6">
                     <div>
-                        <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                            <Award className="h-5 w-5 text-yellow-400" />
+                        <h3 className="text-lg font-bold text-white flex items-center">
                             Score Weightage Breakdown
                         </h3>
-                        <p className="text-xs text-zinc-400">Hover over any bar to see impact details</p>
+                        <p className="text-xs text-zinc-400">Your credit score is calculated based on these factors. Understanding these factors helps you maintain a good credit score.</p>
                     </div>
-                    <span className="border border-white/20 bg-white/10 px-2.5 py-1 rounded-md text-xs text-white">
+                    <span className="border border-white/20 bg-white/10 px-2.5 py-1 -mt-4 rounded-md text-xs text-white">
                         5 Key Pillars
                     </span>
                 </div>
 
-                <div className="h-[320px] w-full">
+                <div className="h-80 w-full">
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart
                             data={scoreFactors}
                             layout="vertical"
-                            margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
-                        >
+                            margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" stroke="#333" horizontal={false} />
                             <XAxis type="number" domain={[0, 40]} tick={{ fill: "#a1a1aa", fontSize: 12 }} unit="%" />
                             <YAxis
                                 dataKey="name"
                                 type="category"
                                 width={130}
-                                tick={{ fill: "#e4e4e7", fontSize: 12, fontWeight: 500 }}
-                            />
+                                tick={{ fill: "#e4e4e7", fontSize: 12, fontWeight: 500 }} />
                             <Tooltip content={<CustomTooltip />} />
                             <Bar dataKey="percentage" radius={[0, 8, 8, 0]}>
                                 {scoreFactors.map((entry, index) => (
@@ -156,7 +147,6 @@ export default function CreditScoreFactors() {
                 </div>
             </Card>
 
-            {/* Dos and Don'ts Grid */}
             <div className="grid gap-6 md:grid-cols-2">
                 <Card className="p-6 bg-gray-400/10 border border-white/20 rounded-2xl text-white">
                     <div className="flex items-center gap-2 mb-4 pb-3 border-b border-white/10">
@@ -189,15 +179,23 @@ export default function CreditScoreFactors() {
                 </Card>
             </div>
 
-            {/* Pro Tip Card */}
+            <Card className="p-6 bg-gray-400/10 border-none text-white">
+                <h3 className="text-lg font-medium mb-2">Pro Tips</h3>
+                <ul className="list-disc list-inside space-y-2">
+                    <li>Check your credit report regularly for errors</li>
+                    <li>Set up payment reminders to avoid late payments</li>
+                    <li>Keep old credit cards open to maintain credit history</li>
+                    <li>Space out credit applications to minimize impact</li>
+                </ul>
+            </Card>
+
             <Card className="p-5 bg-gray-400/10 border border-white/20 rounded-2xl">
                 <div className="flex items-start gap-3">
-                    <HelpCircle className="h-5 w-5 text-indigo-400 shrink-0 mt-0.5" />
                     <div className="text-xs sm:text-sm text-zinc-300 space-y-1">
                         <span className="font-semibold text-white block">Did You Know?</span>
                         <p>
-                            Checking your own credit score through official apps is considered a 
-                            <strong className="text-indigo-300 font-medium"> Soft Inquiry</strong> and has <strong className="text-green-400 font-medium">0% negative impact</strong> on your credit score!
+                            Checking your own credit score through official apps is considered a
+                            Soft Inquiry and has <strong className="text-indigo-300 font-medium">0% negative impact</strong> on your credit score!
                         </p>
                     </div>
                 </div>
