@@ -12,7 +12,7 @@ import {
     Tooltip,
     ResponsiveContainer,
 } from "recharts";
-import { TrendingDown, Lightbulb, AlertCircle } from "lucide-react";
+import { Lightbulb, AlertCircle } from "lucide-react";
 
 interface PaymentData {
     month: string;
@@ -44,7 +44,6 @@ export default function InterestCalculator() {
                 fullPayment: Math.round(fixedBalance),
             });
         }
-
         return data;
     };
 
@@ -70,20 +69,15 @@ export default function InterestCalculator() {
     return (
         <div className="space-y-8 text-white">
             <div>
-                <div className="flex items-center gap-2 mb-2">
-                    <TrendingDown className="h-5 w-5 text-emerald-400" />
-                    <span className="text-xs uppercase tracking-wider text-emerald-400 font-semibold">Module 4</span>
-                </div>
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">The Minimum Payment Trap</h2>
                 <p className="text-zinc-400 text-sm sm:text-base max-w-2xl">
                     Paying only the &quot;Minimum Amount Due&quot; traps you in high-interest debt cycles for years. Compare minimum payments vs fixed monthly payoffs below.
                 </p>
             </div>
 
-            {/* Inputs Grid */}
             <div className="grid gap-4 sm:grid-cols-3">
                 <div className="p-4 bg-gray-400/10 rounded-xl border border-white/20 space-y-2">
-                    <label className="text-xs font-semibold text-zinc-300 block">
+                    <label className="text-sm font-medium block">
                         Outstanding Balance (₹)
                     </label>
                     <Input
@@ -93,13 +87,12 @@ export default function InterestCalculator() {
                         min={1000}
                         max={500000}
                         step={1000}
-                        className="bg-black/20 border-white/20 text-white font-semibold text-base"
-                    />
-                    <span className="text-[11px] text-zinc-400 block">Total debt on card</span>
+                        className="bg-black/20 border-white/20 text-white font-semibold text-base"/>
+                    <span className="text-[11px] text-zinc-300/90 block">Total debt on card</span>
                 </div>
 
                 <div className="p-4 bg-gray-400/10 rounded-xl border border-white/20 space-y-2">
-                    <label className="text-xs font-semibold text-zinc-300 block">
+                    <label className="text-sm font-medium block">
                         Fixed Monthly Payment (₹)
                     </label>
                     <Input
@@ -109,13 +102,12 @@ export default function InterestCalculator() {
                         min={500}
                         max={50000}
                         step={500}
-                        className="bg-black/20 border-white/20 text-white font-semibold text-base"
-                    />
-                    <span className="text-[11px] text-green-400/90 block">Your targeted monthly payoff</span>
+                        className="bg-black/20 border-white/20 text-white font-semibold text-base"/>
+                    <span className="text-[11px] text-zinc-300/90 block">Your targeted monthly payoff</span>
                 </div>
 
                 <div className="p-4 bg-gray-400/10 rounded-xl border border-white/20 space-y-2">
-                    <label className="text-xs font-semibold text-zinc-300 block">
+                    <label className="text-sm font-medium block">
                         Annual Interest Rate (%)
                     </label>
                     <Input
@@ -125,13 +117,11 @@ export default function InterestCalculator() {
                         min={12}
                         max={48}
                         step={1}
-                        className="bg-black/20 border-white/20 text-white font-semibold text-base"
-                    />
-                    <span className="text-[11px] text-zinc-400 block">Typical card rate: 36-42%</span>
+                        className="bg-black/20 border-white/20 text-white font-semibold text-base"/>
+                    <span className="text-[11px] text-zinc-300/90 block">Typical card rate: 36-42%</span>
                 </div>
             </div>
 
-            {/* Line Chart */}
             <Card className="p-6 bg-gray-400/10 border border-white/20 rounded-2xl text-white">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
                     <div>
@@ -155,7 +145,7 @@ export default function InterestCalculator() {
                         <LineChart data={paymentData} margin={{ top: 10, right: 30, left: 10, bottom: 0 }}>
                             <CartesianGrid strokeDasharray="3 3" stroke="#333" />
                             <XAxis dataKey="month" stroke="#a1a1aa" tick={{ fontSize: 12 }} />
-                            <YAxis stroke="#a1a1aa" tick={{ fontSize: 12 }} tickFormatter={(v) => `₹${(v/1000).toFixed(0)}k`} />
+                            <YAxis stroke="#a1a1aa" tick={{ fontSize: 12 }} tickFormatter={(v) => `₹${(v / 1000).toFixed(0)}k`} />
                             <Tooltip content={<CustomLineTooltip />} />
                             <Line
                                 type="monotone"
@@ -163,27 +153,24 @@ export default function InterestCalculator() {
                                 stroke="#EF4444"
                                 strokeWidth={3}
                                 name="Minimum 5% Payment"
-                                dot={{ fill: "#EF4444", r: 3 }}
-                            />
+                                dot={{ fill: "#EF4444", r: 3 }}/>
                             <Line
                                 type="monotone"
                                 dataKey="fullPayment"
                                 stroke="#10B981"
                                 strokeWidth={3}
                                 name="Fixed Monthly Payoff"
-                                dot={{ fill: "#10B981", r: 3 }}
-                            />
+                                dot={{ fill: "#10B981", r: 3 }}/>
                         </LineChart>
                     </ResponsiveContainer>
                 </div>
             </Card>
 
-            {/* Key Takeaways */}
             <div className="grid sm:grid-cols-2 gap-4">
                 <Card className="p-5 bg-gray-400/10 border border-white/20 rounded-2xl text-white">
                     <div className="flex items-center gap-2.5 mb-2">
                         <AlertCircle className="h-5 w-5 text-red-400" />
-                        <h4 className="font-bold text-red-300 text-sm">Why Minimum Payments Are Dangerous</h4>
+                        <h4 className="font-bold text-sm">Why Minimum Payments Are Dangerous</h4>
                     </div>
                     <p className="text-xs text-zinc-300 leading-relaxed">
                         When you pay only the 5% minimum due, almost 80% of that payment goes towards paying interest charges, leaving the main principal debt practically untouched.
@@ -193,13 +180,22 @@ export default function InterestCalculator() {
                 <Card className="p-5 bg-gray-400/10 border border-white/20 rounded-2xl text-white">
                     <div className="flex items-center gap-2.5 mb-2">
                         <Lightbulb className="h-5 w-5 text-green-400" />
-                        <h4 className="font-bold text-green-300 text-sm">The 100% Payoff Strategy</h4>
+                        <h4 className="font-bold text-sm">The 100% Payoff Strategy</h4>
                     </div>
                     <p className="text-xs text-zinc-300 leading-relaxed">
                         Treat your credit card like a debit card. Always clear 100% of your statement bill every month to enjoy 0 interest and earn maximum rewards stress-free.
                     </p>
                 </Card>
             </div>
+
+            <Card className="p-4 bg-gray-400/10 border-none text-white">
+                <h3 className="text-lg font-medium mb-2">Key Takeaways</h3>
+                <ul className="list-disc list-inside space-y-2">
+                    <li>Interest compounds on your unpaid balance each month</li>
+                    <li>Making only minimum payments can lead to much higher total costs</li>
+                    <li>Higher monthly payments help you pay off debt faster and save on interest</li>
+                </ul>
+            </Card>
         </div>
     );
 }
