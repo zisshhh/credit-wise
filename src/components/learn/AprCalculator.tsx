@@ -111,7 +111,7 @@ export default function AprCalculator() {
                     <Card className="p-6 bg-gray-500/10 border border-white/10 rounded-2xl text-white shadow-2xl">
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-300 mb-4 pb-2 border-b border-white/10 flex items-center justify-between">
                             <span>Repayment Summary</span>
-                            <span className="bg-white/10 border border-white/20 text-white text-[10px] px-2 py-0.5 rounded-md font-semibold">
+                            <span className="border-white/20 text-white text-xs px-2 py-0.5 rounded-md font-semibold">
                                 {duration} Month EMI
                             </span>
                         </h3>
@@ -123,15 +123,15 @@ export default function AprCalculator() {
                             </div>
                             <div className="flex justify-between items-center text-sm">
                                 <span className="text-zinc-400">Total Interest Payable:</span>
-                                <span className="font-semibold text-orange-400">+ ₹{interest.toLocaleString("en-IN")}</span>
+                                <span className="font-semibold">+ ₹{interest.toLocaleString("en-IN")}</span>
                             </div>
                             <div className="pt-3 border-t border-white/10 flex justify-between items-center">
                                 <span className="text-sm font-medium text-zinc-300">Total Amount Paid:</span>
                                 <span className="text-xl font-extrabold text-white">₹{totalRepayment.toLocaleString("en-IN")}</span>
                             </div>
                             <div className="p-3 bg-black/40 rounded-xl border border-white/10 flex justify-between items-center text-xs">
-                                <span className="text-blue-300 font-medium">Est. Monthly EMI:</span>
-                                <span className="text-sm font-bold text-blue-400">₹{monthlyEmi.toLocaleString("en-IN")}/mo</span>
+                                <span className="font-medium">Est. Monthly EMI:</span>
+                                <span className="text-sm font-bold">₹{monthlyEmi.toLocaleString("en-IN")}/mo</span>
                             </div>
                         </div>
                     </Card>
