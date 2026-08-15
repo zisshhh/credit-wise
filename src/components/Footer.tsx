@@ -3,7 +3,7 @@ import { CreditCard } from "lucide-react";
 
 export const Footer = () => {
     return (
-        <footer className="w-full border-t border-white/10 bg-black text-white py-8">
+        <footer className="w-full border-t border-white/10 bg-black text-white py-6">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <Link href="/" className="flex items-center gap-2">
                     <span className="flex size-8 items-center justify-center rounded-lg bg-white/10 text-white">

@@ -1,4 +1,6 @@
 
+export type CardData = "indigo" | "emerald" | "slate" | "sky" | "amber" | "rose";
+
 export interface CardDataProps {
     id: number;
     image: string
@@ -28,7 +30,7 @@ export interface CreditCardDivProps {
     minIncome: string
     rating: number
     isPremium?: boolean
-    benefits: { icon: React.ReactNode; lable: string}[];
+    benefits: { icon: React.ReactNode; lable: string }[];
     rewards: string
     summary: string
 }

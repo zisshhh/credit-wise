@@ -1,10 +1,10 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles, ShieldCheck, Star } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { CreditCardVisual } from "./Credit-card-visual"
 
 export const Hero = () => {
-  return (
+  return (  
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,color-mix(in_oklch,var(--primary),transparent_88%),transparent)]" />
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:px-8 pt-8 pb-16 md:pt-14 md:pb-20 lg:grid-cols-2">
@@ -34,13 +34,13 @@ export const Hero = () => {
         <div className="relative mx-auto w-full max-w-md">
           <div className="relative aspect-square">
             <div className="absolute left-2 top-4 w-[78%] -rotate-6">
-              <CreditCardVisual issuer="Northwind Financial" name="Unlimited Cash" theme="emerald" />
+              <CreditCardVisual issuer="American Express" bankName="" name="" theme="emerald" />
             </div>
             <div className="absolute right-2 top-0 w-[78%] rotate-6">
-              <CreditCardVisual issuer="Atlas Express" name="SkyMiles Plus" theme="sky" />
+              <CreditCardVisual issuer="American Express" bankName=" HDFC BANK" name="Aditya Kaur" theme="sky" />
             </div>
             <div className="absolute bottom-6 left-1/2 w-[82%] -translate-x-1/2">
-              <CreditCardVisual issuer="Vertex Bank" name="Sapphire Reserve" theme="indigo" />
+              <CreditCardVisual issuer="Dinners Club" bankName="HDFC BANK" name="William Johes" theme="slate" />
             </div>
           </div>
         </div>

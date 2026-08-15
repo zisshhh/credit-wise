@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import type { CardData } from "@/types" 
+import type { CardData } from "@/types"
 import { Wifi } from "lucide-react"
 
 const themeStyles: Record<CardData, string> = {
@@ -13,14 +13,15 @@ const themeStyles: Record<CardData, string> = {
 interface CreditCardVisualProps {
   name: string
   issuer: string
+  bankName: string
   theme: CardData
   className?: string
 }
 
-export function CreditCardVisual({ name, issuer, theme, className }: CreditCardVisualProps) {
+export function CreditCardVisual({ name, issuer, theme, className, bankName }: CreditCardVisualProps) {
   return (
     <div
-      className={cn( "relative flex aspect-[1.586/1] w-full flex-col justify-between overflow-hidden rounded-xl bg-linear-to-br p-5 shadow-lg",
+      className={cn("relative flex aspect-[1.586/1] w-full flex-col justify-between overflow-hidden rounded-xl bg-linear-to-br p-5 shadow-lg",
         themeStyles[theme],
         className,
       )}
@@ -30,7 +31,7 @@ export function CreditCardVisual({ name, issuer, theme, className }: CreditCardV
 
       <div className="flex items-start justify-between">
         <span className="font-heading text-sm font-bold tracking-tight">{issuer}</span>
-        <Wifi className="size-5 rotate-90 opacity-80" aria-hidden="true" />
+        <span className="font-heading text-sm font-bold tracking-tight">{bankName}</span>
       </div>
 
       <div className="flex flex-col gap-3">
