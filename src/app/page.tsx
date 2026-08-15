@@ -1,15 +1,17 @@
 import { AvailableCard } from '@/components/AvailableCard';
-import { CardDiv } from '@/components/CardDiv';
 import { Hero } from '@/components/Hero';
 import { Navbaar } from '@/components/Navbar';
-import data from '@/data/cards.json';
+import { ChatSection } from '@/components/ChatSection';
+import { Footer } from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className='min-h-screen bg-black text-white'>
+    <main className='min-h-screen bg-black text-white flex flex-col'>
       <Navbaar />
       <Hero />
       <AvailableCard limit={8} />
+      <ChatSection />
+      <Footer />
     </main>
   );
 }
