@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Simple monochrome Credit Wise favicon -->
+  <circle cx="256" cy="256" r="256" fill="#111111"/>
+
+  <!-- Minimal credit card -->
+  <rect x="116" y="156" width="280" height="200" rx="28"
+        fill="none" stroke="#ffffff" stroke-width="20"/>
+
+  <!-- Card stripe -->
+  <path d="M116 218h280" stroke="#ffffff" stroke-width="20"/>
+
+  <!-- Chip -->
+  <rect x="154" y="258" width="62" height="48" rx="8"
+        fill="none" stroke="#ffffff" stroke-width="10"/>
+
+  <!-- Simple W / wisdom mark -->
+  <path d="M274 268l18 42 18-28 18 28 18-42"
+        fill="none" stroke="#ffffff" stroke-width="10"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

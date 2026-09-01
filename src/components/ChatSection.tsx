@@ -78,9 +78,9 @@ export const ChatSection = () => {
         chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
     };
 
-  useEffect(() => {
-   
-}, [messages, isTyping]);
+    useEffect(() => {
+
+    }, [messages, isTyping]);
 
     const handleSend = async (textToSend?: string) => {
         const text = textToSend || input;
@@ -177,28 +177,23 @@ export const ChatSection = () => {
                         <div
                             key={msg.id}
                             className={`flex items-start gap-3.5 ${msg.sender === "user" ? "flex-row-reverse" : "flex-row"
-                                }`}
-                        >
-                            {/* Avatar */}
+                                }`}>
                             {msg.sender === "bot" ? (
                                 <div className="size-10 rounded-full bg-linear-to-tr from-pink-500 via-rose-400 to-sky-400 shrink-0 shadow-lg" />
                             ) : (
                                 <div className="size-10 rounded-full bg-linear-to-tr from-amber-500 via-rose-500 to-indigo-600 shrink-0 shadow-lg" />
                             )}
 
-                            {/* Message Bubble */}
                             <div
                                 className={`max-w-[85%] rounded-[20px] px-5 py-3.5 text-sm sm:text-base leading-relaxed ${msg.sender === "user"
-                                        ? "bg-blue-600 text-white shadow-md"
-                                        : "bg-[#222226] text-zinc-100 border border-white/5 shadow-md"
-                                    }`}
-                            >
+                                    ? "bg-blue-600 text-white shadow-md"
+                                    : "bg-[#222226] text-zinc-100 border border-white/5 shadow-md"
+                                    }`}>
                                 {msg.sender === "user" ? msg.text : renderFormattedText(msg.text)}
                             </div>
                         </div>
                     ))}
 
-                    {/* Typing Indicator */}
                     {isTyping && (
                         <div className="flex items-start gap-3.5">
                             <div className="size-10 rounded-full bg-linear-to-tr from-pink-500 via-rose-400 to-sky-400 shrink-0 shadow-lg animate-pulse" />
@@ -212,29 +207,25 @@ export const ChatSection = () => {
                     <div ref={chatEndRef} />
                 </div>
 
-                {/* Sticky Input Bar */}
                 <div className="sticky bottom-0 z-30 bg-black/95 backdrop-blur-lg pt-3 pb-6 border-t border-white/10 w-full">
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
                             handleSend();
                         }}
-                        className="w-full max-w-4xl mx-auto flex items-center gap-3"
-                    >
+                        className="w-full max-w-4xl mx-auto flex items-center gap-3">
                         <div className="relative flex-1">
                             <input
                                 type="text"
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 placeholder="Ask me about credit cards..."
-                                className="w-full bg-[#18181c] text-white placeholder-zinc-500 border border-white/20 rounded-full px-6 py-3.5 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all shadow-inner"
-                            />
+                                className="w-full bg-[#18181c] text-white placeholder-zinc-500 border border-white/20 rounded-full px-6 py-3.5 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all shadow-inner" />
                         </div>
                         <button
                             type="submit"
                             disabled={!input.trim()}
-                            className="size-11 rounded-full bg-white hover:bg-zinc-200 disabled:opacity-40 text-black flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-lg"
-                        >
+                            className="size-11 rounded-full bg-white hover:bg-zinc-200 disabled:opacity-40 text-black flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-lg">
                             <SendHorizontal className="size-5 text-black" />
                         </button>
                     </form>
