@@ -16,7 +16,7 @@ export const Navbaar = () => {
                         <CreditCard className="size-4" />
                     </span>
                     <span className="text-2xl font-bold  text-white">
-                        Cardly
+                        Credit Wise
                     </span>
                 </Link>
 
