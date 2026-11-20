@@ -11,18 +11,27 @@ export const CardDiv = ({
     minIncome,
     isPremium,
     rating,
+    categoryTag,
     benefits,
     rewards,
     summary
 }: CreditCardDivProps) => {
 
     return (
-        <div className="w-full h-full bg-white/0 shadow-lg ring-1 ring-black/5 text-white rounded-2xl p-4 sm:p-6 flex flex-col border border-white/20">
+        <div className="w-full h-full bg-white/0 shadow-lg ring-1 ring-black/5 text-white rounded-2xl p-4 sm:p-6 flex flex-col border border-white/20 hover:border-white/40 transition-all duration-300">
             <div className="grow flex flex-col gap-3 sm:gap-4">
                 <div className="h-7 flex justify-between items-center shrink-0">
                     {isPremium ? (
                         <span className="bg-linear-to-r from-amber-500 via-yellow-400 to-amber-300 text-black text-xs font-semibold px-2 sm:px-3 py-1 rounded-md shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 transition-all duration-300">
                             PREMIUM
+                        </span>
+                    ) : annualFee === 0 ? (
+                        <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-semibold px-2 sm:px-3 py-1 rounded-md">
+                            LIFETIME FREE
+                        </span>
+                    ) : categoryTag ? (
+                        <span className="bg-blue-500/15 text-blue-300 border border-blue-500/30 text-xs font-medium px-2.5 py-1 rounded-md">
+                            {categoryTag}
                         </span>
                     ) : (
                         <div className="h-6"/>

@@ -43,7 +43,7 @@ export function CreditCardVisual({ name, issuer, theme, className, bankName }: C
 
       <div className="flex items-end justify-between gap-2">
         <span className="font-heading text-sm font-semibold leading-tight text-balance">{name}</span>
-        <span className="font-heading text-xs font-bold italic opacity-90">CARDLY</span>
+        <span className="font-heading text-xs font-bold opacity-90">CREDIT-WISE</span>
       </div>
     </div>
   )

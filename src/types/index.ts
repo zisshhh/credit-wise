@@ -3,11 +3,12 @@ export type CardData = "indigo" | "emerald" | "slate" | "sky" | "amber" | "rose"
 
 export interface CardDataProps {
     id: number;
-    image: string
+    image: string;
     bank: string;
     name: string;
     annual_fee: number;
     joining_fee: number;
+    rating: number;
     eligibility: string;
     is_premium: boolean;
     reward_rate: string;
@@ -18,19 +19,20 @@ export interface CardDataProps {
     lounge_access: string;
     fuel_benefits: string;
     dining: string;
-    insurance: string
-    summary: string
+    insurance: string;
+    summary: string;
 }
 
 export interface CreditCardDivProps {
-    image: string
-    cardName: string
-    bankName: string
-    annualFee?: number
-    minIncome: string
-    rating: number
-    isPremium?: boolean
+    image: string;
+    cardName: string;
+    bankName: string;
+    annualFee?: number;
+    minIncome: string;
+    rating: number;
+    isPremium?: boolean;
+    categoryTag?: string;
     benefits: { icon: React.ReactNode; lable: string }[];
-    rewards: string
-    summary: string
+    rewards: string;
+    summary: string;
 }

@@ -15,7 +15,7 @@ export const SummaryModel = ({cardName, summary}: SummaryModelProps) => {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <button className="mt-auto w-full rounded-xl bg-[#151515] py-3 text-sm font-medium text-white transition hover:bg-white/10">
+                <button className="mt-auto w-full cursor-pointer rounded-xl bg-[#151515] py-3 text-sm font-medium text-white transition hover:bg-white/10">
                     Summary
                 </button>
             </DialogTrigger>

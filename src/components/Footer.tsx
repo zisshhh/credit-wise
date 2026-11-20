@@ -10,7 +10,7 @@ export const Footer = () => {
                         <CreditCard className="size-4" />
                     </span>
                     <span className="text-xl font-bold tracking-tight text-white">
-                        Cardly
+                        Credit Wise
                     </span>
                 </Link>
 
