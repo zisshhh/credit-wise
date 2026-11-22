@@ -7,7 +7,7 @@ export default function CardsPage() {
     <main className='min-h-screen bg-black text-white flex flex-col justify-between'>
       <Navbaar />
       <div className="flex-1 pt-4">
-        <AvailableCard />
+        <AvailableCard showSearchAndFilters={true} />
       </div>
       <Footer />
     </main>

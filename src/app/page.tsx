@@ -9,7 +9,7 @@ export default function Home() {
     <main className='min-h-screen bg-black text-white flex flex-col'>
       <Navbaar />
       <Hero />
-      <AvailableCard limit={8} />
+      <AvailableCard limit={8} showSearchAndFilters={false} />
       <ChatSection />
       <Footer />
     </main>
