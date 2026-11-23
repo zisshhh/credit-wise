@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils"
 import type { CardData } from "@/types"
-import { Wifi } from "lucide-react"
 
 const themeStyles: Record<CardData, string> = {
   indigo: "from-indigo-900 via-indigo-700 to-indigo-500 text-white",
@@ -10,6 +9,7 @@ const themeStyles: Record<CardData, string> = {
   amber: "from-amber-700 via-amber-600 to-amber-400 text-white",
   rose: "from-rose-900 via-rose-700 to-rose-500 text-white",
 }
+
 interface CreditCardVisualProps {
   name: string
   issuer: string
@@ -24,8 +24,7 @@ export function CreditCardVisual({ name, issuer, theme, className, bankName }: C
       className={cn("relative flex aspect-[1.586/1] w-full flex-col justify-between overflow-hidden rounded-xl bg-linear-to-br p-5 shadow-lg",
         themeStyles[theme],
         className,
-      )}
-    >
+      )}>
       <div className="pointer-events-none absolute -right-8 -top-10 size-32 rounded-full bg-white/10" aria-hidden="true" />
       <div className="pointer-events-none absolute -bottom-12 -left-6 size-32 rounded-full bg-white/5" aria-hidden="true" />
 

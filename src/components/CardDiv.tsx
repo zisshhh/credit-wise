@@ -11,7 +11,6 @@ export const CardDiv = ({
     minIncome,
     isPremium,
     rating,
-    categoryTag,
     benefits,
     rewards,
     summary

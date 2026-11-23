@@ -3,10 +3,8 @@
 import Link from "next/link"
 import { CreditCard } from "lucide-react"
 import { Button } from "./ui/button"
-import { useRouter } from "next/navigation"
 
 export const Navbaar = () => {
-    const router = useRouter()
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-md">
